@@ -1,0 +1,14 @@
+.form {
+  width: 22%;
+  height: 1.8rem;
+  display: flex;
+  justify-content: flex-start;
+  
+  .inpt {
+    width: 80%;
+    margin-right: 0.3rem;
+  }
+  .btn {
+    width: 20%;
+  }
+}
