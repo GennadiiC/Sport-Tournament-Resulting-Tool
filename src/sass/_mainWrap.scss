@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

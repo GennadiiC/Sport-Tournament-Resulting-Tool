@@ -1,15 +1,27 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
+import { handleAddCountry } from "../redux/footballSlice";
 
 export function Table () {
 
   const { countries } = useSelector((state) => state.football)
+  const dispatch = useDispatch()
+  const { register, handleSubmit, reset } = useForm()
+
+
+  const onSubmit = (value) => {
+    dispatch(handleAddCountry({ input: value.country }))
+    reset()
+  }
 
   return (
-    <div>
-      {console.log(countries)}
-      <form className="form">
-        <input className="inpt" />
-        <button className="btn" type="submit">Add</button>
+    <div className="wrapper">
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <input 
+          className="inpt" 
+          {...register('country')}
+        />
+        <button className="btn" type="submit" onClick={handleSubmit(onSubmit)}>Add</button>
       </form>
       <table>
         <thead>
@@ -26,7 +38,7 @@ export function Table () {
         <tbody>
         {countries.map((country, i) => 
           <tr key={i + 1}>
-            <th>{}</th> 
+            <th>{i + 1}</th> 
             <th>{country.name}</th>
             <th>{country.played}</th>
             <th>{country.win}</th>

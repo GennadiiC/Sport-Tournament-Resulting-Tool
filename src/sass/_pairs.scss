@@ -1,0 +1,45 @@
+.pairs {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+  .pairWrap {
+    display: flex;
+    justify-content: space-between;
+
+    .textWrap1, .textWrap2 {
+      width: 35%
+    }
+
+    .textWrap1 {
+      text-align: left;
+    }
+
+    .textWrap2 {
+      text-align: right;
+    }
+
+    .inpWrap {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-self: center;
+      padding: 0;
+      
+      .dataInp {
+        text-align: center;
+        width: 30%;
+      }
+
+      .semi {
+        margin: auto 0.4rem;
+      }
+
+    }
+    
+    .dis {
+      display: none;
+    }
+  }
+}

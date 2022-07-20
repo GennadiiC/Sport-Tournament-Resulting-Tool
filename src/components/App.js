@@ -1,12 +1,12 @@
 import { Table } from './Table'
+import { Pairs } from './Pairs'
 
 function App() {
 
- 
-
   return (
-    <div>
+    <div className="main">
       <Table />
+      <Pairs />
     </div>
   );
 }
