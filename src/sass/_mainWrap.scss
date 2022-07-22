@@ -1,10 +1,46 @@
+
+.h1 {
+  text-align: center;
+  font-family: $head-font;
+}
+
 .main {
   display: flex;
-  align-items: baseline;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  @media screen and (max-width: 1195px) {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   .wrapper {
     display: flex;
     flex-direction: column;
+    width: 40%;
+
+    h2 {
+      font-family: $head-font;
+    }
+
+    @media screen and (max-width: 1195px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 985px) {
+      width: 63%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+    }
   }
 }

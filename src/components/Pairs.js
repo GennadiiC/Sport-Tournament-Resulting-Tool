@@ -15,9 +15,9 @@ const FormScore = ({ matchID }) => {
 
   return (
     <form className="inpWrap" onSubmit={handleSubmit(onSubmit)}>
-      <input type='text' className="dataInp" {...register('score1')} autoComplete="off" />
+      <input type='text' className="dataInp1" {...register('score1')} autoComplete="off" />
         <div className="semi">:</div>
-      <input type='text' className="dataInp" {...register('score2')} autoComplete="off" />
+      <input type='text' className="dataInp2" {...register('score2')} autoComplete="off" />
       {/* disabled input for onSubmit function be able to work */}
       <input type='submit' className="dis"/>
     </form>
@@ -28,20 +28,20 @@ const FormScore = ({ matchID }) => {
 const ScorePair = ({ firstCountryScore, secondCountryScore }) => {
   return (
     <div className="inpWrap">
-      <div className="dataInp">{firstCountryScore}</div>
+      <div className="dataDisp1">{firstCountryScore}</div>
       <div className="semi">:</div>
-      <div className="dataInp">{secondCountryScore}</div>
+      <div className="dataDisp2">{secondCountryScore}</div>
     </div>
   )
 }
 
 export const Pairs = () => {
 
-  const { countries, matchPairs } = useSelector((state) => state.football)
+  const { matchPairs } = useSelector((state) => state.football)
 
   return (
     <div className='pairs'>
-      {console.log(countries)}
+      <h2>Tournaments:</h2>
       {
         matchPairs.length > 0 ?
         matchPairs.map((item, i) => 

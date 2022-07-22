@@ -1,13 +1,48 @@
+
 .form {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   height: 1.8rem;
-  display: flex;
-  justify-content: flex-start;
+  margin-bottom: 0.3rem;
+
+  .inpt, .btn, .p {
+    font-family: $regular-font
+  }
+
+  .inpt, .btn {
+    // background-color: $second-color;
+    border: 0.1rem solid $third-color;
+    border-radius: 3px;
+  }
   
-  .inpt {
-    width: 80%;
+  .inpt { 
+    grid-column-start: 1;
+    grid-column-end: 3;
     margin-right: 0.3rem;
+
+    &:hover {
+      background-color: $second-color;
+    }
+    
   }
   .btn {
-    width: 20%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $second-color;
+    }
+
+    &:active {
+      color: $second-color;
+      background-color: $third-color;
+    }
+  }
+
+  .p {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    align-self: center;
   }
 }

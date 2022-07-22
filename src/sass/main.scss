@@ -1,4 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$head-font: 'Lato', sans-serif;
+$regular-font: 'Montserrat', sans-serif;
+$first-color: #324B4F;
+$second-color: #FFF0EA;
+$third-color: #008492;
+$forth-color: #F9F871;
+
+
 @import 'reset';
 @import 'form';
 @import 'mainWrap';
 @import 'pairs';
+@import 'table';
+
+
+
+

@@ -4,9 +4,12 @@ import { Pairs } from './Pairs'
 function App() {
 
   return (
-    <div className="main">
-      <Table />
-      <Pairs />
+    <div>
+      <h1 className='h1'>Tournament Resulting Tool</h1>
+      <div className="main">
+        <Table />
+        <Pairs />
+      </div>
     </div>
   );
 }

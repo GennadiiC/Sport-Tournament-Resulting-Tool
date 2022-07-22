@@ -1,0 +1,51 @@
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 0.2rem solid;
+  border-radius: 3px;
+  background-color: $forth-color;
+
+  .tHead {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-family: $head-font;
+    text-align: center;
+    height: 2rem;
+
+    div {
+      align-self: center;
+      color: $forth-color;
+    }
+  }
+
+  .tHead, .tHead div {
+    background-color: $third-color;
+  }
+
+  .tBody, .tBody div {
+    background-color: $forth-color;
+  }
+
+  .tBody {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    justify-self: stretch;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-family: $regular-font;
+
+    :nth-child(2) {
+      font-size: small;
+
+      @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+        text-align: left;
+      }
+    }
+
+  }
+
+}
+

@@ -21,10 +21,11 @@ export const footballSlice = createSlice({
         points: 0,
         place: null
       }
-      // adding country to state array
-      state.countries.push(country)
-      // creating match object - game between two teams
-      if (state.countries.length > 0) {
+      
+      if (payload.input && !state.countries.map(country => country.name).includes(payload.input)) {
+        // adding country to state array
+        state.countries.push(country)
+        // creating match object - game between two teams
         const match = state.countries.filter(country => country.name !== payload.input)
           .map(item => (
             {
@@ -65,7 +66,9 @@ export const footballSlice = createSlice({
       // adding draws
       if (match.draw) {
         firstCountry.draw += 1
+        firstCountry.points += 1
         secondCountry.draw += 1
+        secondCountry.points += 1
       }
       // adding wins, looses and points
       if (match.firstCountryScore > match.secondCountryScore) {
